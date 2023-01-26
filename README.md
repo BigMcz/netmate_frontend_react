@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# NETMATE - Michal Matúš
+# Vstupní zadání na pozici front-end developer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Popis
+Vytvořit modul s prostředím pro selekci svg ikon do předem připravených slotů. Vstupem bude JSON pole objektů, získané z existujícího API endpointu.
+Projekt bude stavěn na frameworku Bootstrap 5. Další knihovny a pluginy jsou na Vašem uvážení.
+Celkově bude potřeba vypracovat dvě hlavní části:
 
-## Available Scripts
+Část 1: HTML stránka se 4mi prázdnými sloty.
+Část 2: Galerie ikon. Tato galerie se zobrazí po kliknutí na jeden ze slotů na hlavní stránce.
 
-In the project directory, you can run:
+Po kliknutí na jednu z ikon v galerii se galerie zavře. Na slotu, kterým byla galerie vyvolána se zobrazí vybraná ikona. Tzn. pokud kliknu na třetí slot a následně v galerii na ikonu Design – Fusion, zobrazí se tato ikona na třetím slotu a galerie se zavře. Dále přidejte na první místo v galerii ikonu, pomocí které se slot vyprázdní.
+Ikony v galerii budou mít take přidělené ID (či `data-id` atribut), které se zapíše do atributu `data-icon`, který s sebou nese každý slot. Tzn. slot 1 bude mít atribut “data-icon” prázdný, ale po zvolení ikony se hodnota atributu změní např. na data-icon=”143”.
+Dále je potřeba, aby součástí galerie bylo také fulltextové vyhledávání ikon. Toto vyhledávání bude pracovat pouze nad názvy ikon.
 
-### `npm start`
+Bonusové zadání:
+Vytvořit v galerii ovládací prvek `<select>`, který bude obsahovat 2 položky: `Vše` a `Energie`. Výchozí položka bude “Vše”. Pokud uživatel překlikne toto pole na položku “Energie”, budou se zobrazovat pouze ikony, které mají v názvu slovo “Energie”. Po překliknutí zpět na “Vše” se znovu zobrazí všechny ikony.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+API endpoint pro načítání ikon:
+[http://82.142.87.102/extAPI/api/icon/read.php?parent=2](http://82.142.87.102/extAPI/api/icon/read.php?parent=2)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Umístění ikony je potom nasledující:
+[https://eletak.oresi.cz/files/Icons/CZ/](https://eletak.oresi.cz/files/Icons/CZ/) + pole “filename” z JSONu.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
